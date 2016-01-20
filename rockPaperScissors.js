@@ -1,5 +1,11 @@
+
+// prompt the user to choose rock, paper or scissors
 var userChoice = prompt("Do you choose rock, paper or scissors?");
+
+// set computer choice variable to a random number between 0 and 1
 var computerChoice = Math.random();
+
+// assign possible range of results to either rock paper or scissors
 if (computerChoice < 0.34) {
 	computerChoice = "rock";
 } else if(computerChoice <= 0.67) {
@@ -8,6 +14,8 @@ if (computerChoice < 0.34) {
 	computerChoice = "scissors";
 } console.log("Computer: " + computerChoice);
 
+
+// function will take in computer and user choices and compare them to get result
 var compare = function(choice1, choice2) {
     if (choice1 === choice2) {
         return "The result is a tie!";
@@ -40,4 +48,5 @@ var compare = function(choice1, choice2) {
     }
 }
 
+// call the function, passing in our user choice and random generated computer choice
 compare(userChoice, computerChoice);
